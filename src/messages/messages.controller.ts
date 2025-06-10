@@ -11,15 +11,17 @@ export class MessagesController {
   }
 
   @Get()
-  listMessages() {}
+  listMessages() {
+    return this.messagesService.findAll();
+  }
 
   @Post()
   createMessage(@Body() body: createMessageDto) {
-    console.log(body);
+    return this.messagesService.create(body.content);
   }
 
   @Get(':id')
   getMessages(@Param('id') id: string) {
-    console.log(id);
+    return this.messagesService.findOne(id);
   }
 }

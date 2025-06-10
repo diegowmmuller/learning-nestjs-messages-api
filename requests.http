@@ -7,7 +7,7 @@ POST http://localhost:3000/messages
 content-type: application/json
 
 {
-    "content":"Hi there!"
+    "content":"Hello first crud message"
 }
 
 ### Get a particular Message
